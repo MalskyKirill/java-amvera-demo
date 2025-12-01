@@ -1,0 +1,14 @@
+meta:
+    environment: jvm
+    toolchain:
+        name: maven
+        version: 11
+
+build:
+    # дополнительно к mvn clean package, Amvera подставит args в команду
+    # получится: mvn clean package spring-boot:repackage
+    args: spring-boot:repackage
+
+run:
+    jarName: demo-1.0.0.jar
+    containerPort: 8080
